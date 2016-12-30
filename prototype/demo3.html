@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+  var a ={
+        name:"ed",
+        SayHi:function(){
+            alert("my name is "+this.name);
+        }
+    };
+    var b ={
+        name:'edmund'
+    };
+  a.SayHi.call(b);
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function ClassA(){
+        this.a=100;
+        this.b=200;
+        this.c=300;}
+    ClassA.prototype=new ClassA();
+    ClassA.prototype.reset=function(){
+       // var x =200;
+        for(var each in this){
+         /*   this[each]=x;
+            x+=100;  */
+            delete this[each];
+        }
+         };
+    var A = new ClassA();
+    console.log(A.a);
+    A.reset();
+    console.log(A.a);
+</script>
+</body>
+</html>

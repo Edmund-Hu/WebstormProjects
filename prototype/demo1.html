@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script>
+
+
+    function Point(x,y){
+        this.x=x;
+        this.y=y;
+    }
+    var p1 = new Point(1,2);
+    var p2 = new Point(3,4);
+    Point.prototype.z=0;
+
+
+    function Person(name) {
+        this.name = name
+    }
+    // 重写原型
+    Person.prototype = {
+        getName: function() {}
+    };
+    var p = new Person('jack');
+    console.log(p.__proto__ == Person.prototype); // true
+    console.log(p.__proto__ == p.constructor.prototype); // false
+    console.log(p.name);
+
+</script>
+<body>
+
+</body>
+</html>
